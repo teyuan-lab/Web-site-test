@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Catch 蘋果接接樂</title>
+  <link rel="stylesheet" href="apple_catch.css">
+</head>
+<body>
+  <main class="game-card">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">🍎 SUNNY ORCHARD</p>
+        <h1>Apple Catch</h1>
+        <p class="subtitle">接住從樹上掉下來的蘋果吧！</p>
+      </div>
+      <div class="apple-badge" aria-hidden="true">🍏</div>
+    </header>
+
+    <section class="scoreboard" aria-label="遊戲資訊">
+      <div class="stat-box">
+        <span class="stat-label">分數</span>
+        <strong id="scoreValue">0</strong>
+      </div>
+      <div class="stat-box lives-box">
+        <span class="stat-label">剩餘生命</span>
+        <strong id="livesValue">3 / 3</strong>
+        <span id="heartValue" class="hearts" aria-label="剩餘三條生命">❤️ ❤️ ❤️</span>
+      </div>
+    </section>
+
+    <section class="stage-wrap">
+      <canvas id="gameCanvas" width="720" height="520" aria-label="蘋果接接樂遊戲畫面"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div class="overlay-emoji">🧺</div>
+          <h2 id="overlayTitle">準備接蘋果！</h2>
+          <p id="overlayText">使用鍵盤 ← → 或下方按鈕移動籃子。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <button id="startButton" class="primary-button">▶ 開始遊戲</button>
+      <button id="restartButton" class="secondary-button">↻ 重新開始</button>
+    </div>
+
+    <div class="touch-controls" aria-label="觸控移動按鈕">
+      <button class="move-button" data-direction="left">←</button>
+      <span>移動籃子</span>
+      <button class="move-button" data-direction="right">→</button>
+    </div>
+
+    <p class="tip">小提醒：漏掉 3 顆蘋果就會結束遊戲。</p>
+  </main>
+
+  <script src="apple_catch.js"></script>
+</body>
+</html>
